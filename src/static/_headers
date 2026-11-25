@@ -1,0 +1,11 @@
+# Response headers for Cloudflare Pages (ignored by GitHub Pages).
+
+/*
+  Content-Security-Policy: default-src 'none'; style-src 'self'; img-src 'self'; script-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), browsing-topics=()
+
+/assets/*
+  Cache-Control: public, max-age=604800

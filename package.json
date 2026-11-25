@@ -1,0 +1,17 @@
+{
+  "name": "vjcodelab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VJ CodeLab — a little space for ideas and experiments.",
+  "type": "module",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs --watch",
+    "preview": "node scripts/serve.mjs",
+    "images": "node scripts/render-images.mjs",
+    "check": "node scripts/check.mjs"
+  }
+}
