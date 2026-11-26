@@ -36,6 +36,12 @@ const html = (strings, ...values) =>
 
 const pad = (n) => String(n).padStart(2, '0');
 const hostOf = (url) => new URL(url).hostname.replace(/^www\./, '');
+// Readable link text: the host, plus the path when there is one
+// (e.g. github.com/vijayrkn/pickwise).
+const displayUrl = (url) => {
+  const u = new URL(url);
+  return hostOf(url) + u.pathname.replace(/\/$/, '');
+};
 
 async function load(relPath) {
   // Query string defeats the module cache so `npm run dev` picks up edits.
@@ -207,7 +213,7 @@ function experimentItem(p, i, site) {
           <p class="description">${esc(p.description)}</p>
           ${p.note ? `<p class="note">${esc(p.note)}</p>` : ''}
           <div class="links">
-            <span class="visit" aria-hidden="true">${esc(hostOf(p.url))} ${ICON_ARROW}</span>
+            <span class="visit" aria-hidden="true">${esc(displayUrl(p.url))} ${ICON_ARROW}</span>
             ${(p.links || []).map((l) => extraLink(l, p, site))}
           </div>
         </div>

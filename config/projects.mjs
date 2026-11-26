@@ -78,4 +78,20 @@ export default [
       dark: { bg: '#18222D', accent: '#7DB4EA' },
     },
   },
+  {
+    id: 'pickwise',
+    name: 'Pickwise',
+    url: 'https://github.com/vijayrkn/pickwise',
+    category: 'AI Agents & Markets',
+    tagline: 'One well-reasoned stock idea a day.',
+    description:
+      'An autonomous AI research agent that screens US large caps, researches a shortlist with Claude, and publishes one stock idea every trading day. It keeps score of itself against the S&P 500, misses included.',
+    note: 'An experiment in agent design, not financial advice.',
+    status: 'live',
+    logo: 'pickwise.svg',
+    theme: {
+      light: { bg: '#F2EAE2', accent: '#8E4426' },
+      dark: { bg: '#2A221D', accent: '#E39B7B' },
+    },
+  },
 ];
